@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_siniestro_interno,Siniestro interno,model_gob_chajari_siniestro,gob_chajari_siniestro.group_usuario_interno,1,1,1,0
+access_persona_interno,Persona interno,model_gob_chajari_siniestro_persona,gob_chajari_siniestro.group_usuario_interno,1,1,1,0
+access_participacion_interno,Participacion interno,model_gob_chajari_siniestro_participacion,gob_chajari_siniestro.group_usuario_interno,1,1,1,0
+
+access_siniestro_admin,Siniestro admin,model_gob_chajari_siniestro,gob_chajari_siniestro.group_usuario_administrador,1,1,1,1
+access_persona_admin,Persona admin,model_gob_chajari_siniestro_persona,gob_chajari_siniestro.group_usuario_administrador,1,1,1,1
+access_participacion_admin,Participacion admin,model_gob_chajari_siniestro_participacion,gob_chajari_siniestro.group_usuario_administrador,1,1,1,1

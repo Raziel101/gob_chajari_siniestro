@@ -1,0 +1,98 @@
+<odoo>
+
+    <!-- Acción -->
+    <record id="action_siniestros" model="ir.actions.act_window">
+        <field name="name">Siniestros</field>
+        <field name="res_model">gob_chajari.siniestro</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Vista Lista -->
+    <record id="view_siniestro_tree" model="ir.ui.view">
+        <field name="name">siniestro.tree</field>
+        <field name="model">gob_chajari.siniestro</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="numero_id"/>
+                <field name="fecha_hora"/>
+                <field name="ubicacion"/>
+                <field name="tipo_intervencion"/>
+                <field name="siniestro_tipo"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Vista Formulario -->
+    <record id="view_siniestro_form" model="ir.ui.view">
+        <field name="name">siniestro.form</field>
+        <field name="model">gob_chajari.siniestro</field>
+        <field name="arch" type="xml">
+            <form string="siniestro Vial">
+                <sheet>
+
+                    <group>
+                        <field name="numero_id"/>
+                        <field name="fecha_hora"/>
+                        <field name="ubicacion"/>
+                    </group>
+
+                    <notebook>
+                        <page string="Datos">
+                            <group>
+                                <field name="tipo_intervencion"/>
+                                <field name="siniestro_tipo"/>
+                                <field name="causa_sinistro"/>
+                                <field name="tipo_colision"/>
+                            </group>
+                        </page>
+                        <page string="Calzada">
+                            <group>
+                                <field name="caracteristica_calzada"/>
+                                <field name="material_calzada"/>
+                                <field name="estado_calzada"/>
+                                <field name="tipo_clima"/>
+                                <field name="visibilidad"/>
+                                <field name="semaforo"/>
+                            </group>
+                        </page>
+
+                        <page string="Personas y Vehículos">
+                            <field name="participacion_ids">
+                                <list editable="bottom">
+                                    <field name="persona_id"/>
+                                    <field name="rol"/>
+                                    <field name="dni"/>
+                                    <field name="fecha_nacimiento"/>
+                                    <field name="edad"/>
+                                    <field name="estado_civil"/>
+                                    <field name="licencia"/>
+                                    <field name="vehiculo"/>
+                                    <field name="dominio"/>
+                                    <field name="tipo_vehiculo"/>
+                                    <field name="lesiones"/>
+                                </list>
+                            </field>
+                        </page>
+
+                        <page string="Observaciones">
+                            <field name="observacion"/>
+                            <br/>
+                            <label for="croquis" string="Croquis:"/><br/>
+                            <field name="croquis"/>
+                            <br/>
+                            <field name="croquis2"/>
+                        </page>
+                    </notebook>
+
+                    <!-- CHATTER -->
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

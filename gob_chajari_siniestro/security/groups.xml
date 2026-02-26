@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- Grupo Usuario Interno -->
+    <record id="group_usuario_interno" model="res.groups">
+        <field name="name">Siniestros - Usuario Interno</field>
+    </record>
+
+    <!-- Grupo Administrador -->
+    <record id="group_usuario_administrador" model="res.groups">
+        <field name="name">Siniestros - Administrador</field>
+        <field name="implied_ids" eval="[(4, ref('group_usuario_interno'))]"/>
+    </record>
+
+</odoo>

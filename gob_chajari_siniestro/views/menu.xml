@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- Menú raíz -->
+    <menuitem
+        id="menu_siniestro_root"
+        name="Registro Siniestros"
+        sequence="2"
+        groups="base.group_user"/>
+
+    <!-- Menús hijos -->
+    <menuitem
+        id="menu_siniestro"
+        name="Siniestros"
+        parent="menu_siniestro_root"
+        action="action_siniestros"
+        sequence="1"
+        groups="base.group_user"/>
+
+    <menuitem
+        id="menu_persona"
+        name="Personas"
+        parent="menu_siniestro_root"
+        action="action_personas"
+        sequence="2"
+        groups="base.group_user"/>
+
+</odoo>
