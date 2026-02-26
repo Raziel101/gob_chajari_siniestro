@@ -47,6 +47,10 @@ class GobChajariSiniestro(models.Model):
         ('otros', 'Otros'),
     ], string='Características de la Calzada', tracking=True)
 
+    otros_calzada = fields.Char(
+        string="Otros Calzada", tracking=True
+    )
+
     material_calzada = fields.Selection([
         ('asfalto', 'Asfalto'),
         ('ripio', 'Ripio'),
@@ -77,10 +81,10 @@ class GobChajariSiniestro(models.Model):
 
     semaforo = fields.Boolean(string='Semáforo', tracking=True)
 
-    observacion = fields.Text(string='Observaciones')
+    observacion = fields.Text(string='Observaciones', tracking=True)
 
-    croquis = fields.Binary(string='Croquis')
-    croquis2 = fields.Binary(string='Croquis2')
+    croquis = fields.Binary(string='Croquis', tracking=True)
+    croquis2 = fields.Binary(string='Croquis2', tracking=True)
 
     participacion_ids = fields.One2many(
         'gob_chajari.siniestro.participacion',

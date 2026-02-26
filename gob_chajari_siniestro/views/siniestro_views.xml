@@ -49,7 +49,7 @@
                             <group>
                                 <field name="caracteristica_calzada"/>
                                 <field name="material_calzada"/>
-                                <field name="estado_calzada"/>
+                                <field name="otros_calzada" invisible="material_calzada != 'otros'" required="material_calzada == 'otros'"/><field name="estado_calzada"/>
                                 <field name="tipo_clima"/>
                                 <field name="visibilidad"/>
                                 <field name="semaforo"/>
